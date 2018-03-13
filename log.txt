@@ -1,0 +1,122 @@
+Peggy Li@DESKTOP-C1T3FFU ~/makefile-practice
+$ ls
+CardSet.cpp  CardSet.h  Game.cpp  Game.h  log.txt  main.cpp  Makefile  Player.cpp  Player.h
+
+Peggy Li@DESKTOP-C1T3FFU ~/makefile-practice
+$ make
+g++ -c CardSet.cpp
+g++ -c Player.cpp
+g++ -c Game.cpp
+g++ -c main.cpp
+g++ main.o Game.o CardSet.o Player.o -o GoHome.exe
+
+Peggy Li@DESKTOP-C1T3FFU ~/makefile-practice
+$ ls
+CardSet.cpp  CardSet.o  Game.h  GoHome.exe  main.cpp  Makefile    Player.h
+CardSet.h    Game.cpp   Game.o  log.txt     main.o    Player.cpp  Player.o
+
+Peggy Li@DESKTOP-C1T3FFU ~/makefile-practice
+$ ./GoHome.exe
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͻ
+▒                                Game GoHome!                                ▒
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͼ
+- - - - - - - - - - - - - - - - - - Rules - - - - - - - - - - - - - - - - - -
+Number of Players: 2-6
+
+Object of the Game
+    -To reach the last space on the board, labeled 'H' for 'Home.'
+
+Setting Up
+    -Players will be sorted according to name length.
+    -The player with the shortest name will go first,
+     followed by the player with the next shortest name.
+    -If two or more players have names of the same length, turn order
+     among these players will be determined by name entry order.
+
+Gameplay
+    -At the beginning of each turn, the player will select a card.
+        -If the card selected is an 'L' card, the player will lose a turn,
+         and gameplay will pass to the next player.
+        -If the card selected is a '▒' card, the player will switch locations
+         with another player.
+        -If the card selected is a numeric card, the player will move forward
+         the number of spaces on the card.
+    -After moving, if the player lands on a tile with a number, the player
+     will move back that number of spaces
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͻ
+▒                                 Setting Up                                 ▒
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͼ
+- - - - - - - - - - - - - - - - - - Board - - - - - - - - - - - - - - - - - -
+Please select the number of spaces (2-38): 5
+
+Please select the number of obstacles (1-1): 1
+
+Please select the largest obstacle value (1-1): 1
+
+Your board has 5 spaces, 1 obstacles, and a maximum obstacle value of 1.
+▒▒▒▒▒▒▒▒▒Ŀ
+▒S▒1▒ ▒G▒H▒
+▒▒▒▒▒▒▒▒▒▒▒
+
+- - - - - - - - - - - - - - - - - - Cards - - - - - - - - - - - - - - - - - -
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͻ
+▒▒▒L▒6▒5▒2▒2▒5▒4▒6▒8▒
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͼ
+
+The cards have been shuffled:
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͻ
+▒4▒6▒2▒2▒6▒8▒5▒5▒L▒▒▒
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͼ
+
+- - - - - - - - - - - - - - - - - -Players- - - - - - - - - - - - - - - - - -
+Please enter a player name: A
+Please enter a player name: B
+
+Would you like to enter another player (Y/N)? N
+The players read in are: A, and B.
+
+The player order is: A, and B.
+
+
+The players have been placed on the board:
+
+ A
+ B
+▒▒▒▒▒▒▒▒▒Ŀ
+▒S▒1▒ ▒G▒H▒
+▒▒▒▒▒▒▒▒▒▒▒
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͻ
+▒                                Let's play!                                ▒
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͼ
+
+- - - - - - - - - - - - - - - - - Turn #1: A - - - - - - - - - - - - - - - - -
+
+A has selected a 4 card.
+A moves forward 4 spaces.
+
+ B       A
+▒▒▒▒▒▒▒▒▒Ŀ
+▒S▒1▒ ▒G▒H▒
+▒▒▒▒▒▒▒▒▒▒▒
+
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͻ
+▒                            A has won the game!                            ▒
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ͼ
+
+Peggy Li@DESKTOP-C1T3FFU ~/makefile-practice
+$ ls
+CardSet.cpp  CardSet.o  Game.h  GoHome.exe  main.cpp  Makefile    Player.h
+CardSet.h    Game.cpp   Game.o  log.txt     main.o    Player.cpp  Player.o
+
+Peggy Li@DESKTOP-C1T3FFU ~/makefile-practice
+$ make clean
+rm *.o GoHome.exe
+
+Peggy Li@DESKTOP-C1T3FFU ~/makefile-practice
+$ ls
+CardSet.cpp  CardSet.h  Game.cpp  Game.h  log.txt  main.cpp  Makefile  Player.cpp  Player.h
+
+Peggy Li@DESKTOP-C1T3FFU ~/makefile-practice
+$
